@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="/static/errorpage.css" />
+        <title>SocialPulse | 404 Not Found Page</title>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav__logo">
+                <a href='/'>SocialPulse</a>
+            </div>
+        </nav>
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+
+        <div class="container">
+            {% if error_code == 404 %}
+            <div class="header">
+                <h1>404</h1>
+                <h3>Page Not Found!</h3>
+            </div>
+            {% endif %}
+        </div>
+        <div class="footer">
+            <p>
+                {{ message }}
+            </p>
+            <button>GO HOME</button>
+        </div>
+    </body>
+
+</html>

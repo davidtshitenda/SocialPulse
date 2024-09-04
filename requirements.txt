@@ -1,0 +1,11 @@
+flask
+flask_jwt_extended
+bcrypt
+flask_session
+cs50
+datetime
+cryptography
+werkzeug
+tweepy
+python-dotenv
+utils

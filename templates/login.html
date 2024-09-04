@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+
+    <div class="container d-flex justify-content-center align-items-center">
+        <form id="loginForm" action="/login" method="post" name="loginForm">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+            </div>
+            <div class="form-text mt-3">
+                <a href="/register">Dont have an account?</a>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary mt-4">Login</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/static/login.js"></script>
+
+{% endblock %}
